@@ -1,6 +1,8 @@
 import Header from "./components/header";
 import Aside from "./components/aside";
 import Content from "./components/content";
+import Footer from "./components/footer";
+
 import "./app.css";
 
 function App() {
@@ -115,6 +117,9 @@ function App() {
           <Aside title={MainContent[3].title}></Aside>
         </div>
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 }

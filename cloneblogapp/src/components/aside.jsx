@@ -1,7 +1,9 @@
+import "./aside.css";
+
 function Aside(MainContent) {
   return (
     <div>
-      <div>{MainContent.title}</div>
+      <a href="">{MainContent.title}</a>
     </div>
   );
 }
