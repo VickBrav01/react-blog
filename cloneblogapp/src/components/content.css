@@ -1,0 +1,6 @@
+.content {
+  /* border: 1px solid rgba(255, 0, 0, 0.674); */
+  box-shadow: 0 8px 8px -4px rgba(230, 173, 173, 0.291);
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
