@@ -4,6 +4,13 @@ import Content from "./components/content";
 import Footer from "./components/footer";
 
 import "./app.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Blog1 from "./components/blogs/blog1";
+import Blog2 from "./components/blogs/blog2";
+import Blog3 from "./components/blogs/blog3";
+import Blog4 from "./components/blogs/blog4";
+import PageNotFound from "./components/blogs/PageNotFound";
 
 function App() {
   const MainContent = [
@@ -26,7 +33,9 @@ function App() {
           medium-sized projects, while Angular is better suited for large-scale
           applications that require a structured and opinionated framework.
         `,
+
       Time: "0100Hrs",
+      link: "/blog1",
     },
     {
       title: "Javascript vs Ruby",
@@ -43,7 +52,9 @@ function App() {
           and ease of use, making it an excellent choice for beginners and for
           rapid application development.
         `,
+
       Time: "2300Hrs",
+      link: "/blog2",
     },
     {
       title: "Web3 vs Web2",
@@ -63,7 +74,9 @@ function App() {
           interact with decentralized systems. While Web2 is the current
           dominant model, Web3 holds the potential to revolutionize how we
           interact with the internet and reshape various industries.`,
+
       Time: "1500Hrs",
+      link: "/blog3",
     },
     {
       title: "C++ vs C#",
@@ -79,13 +92,24 @@ function App() {
             framework and offers a more modern, managed code environment. C# is
             widely used for Windows application development, web development, and
             game development using platforms like Unity.`,
+
       Time: "2100Hrs",
+      link: "/blog4",
     },
   ];
   return (
     <div>
       <header className="nav-bar">
-        <Header className="nav-content"></Header>
+        <BrowserRouter>
+          <Header className="nav-content"></Header>
+          <Routes>
+            <Route path="/blog1" element={<Blog1 />} />
+            <Route path="/blog2" element={<Blog2 />} />
+            <Route path="/blog3" element={<Blog3 />} />
+            <Route path="/blog4" element={<Blog4 />} />
+            <Route path="/" />
+          </Routes>
+        </BrowserRouter>
       </header>
       <main className="main">
         <div className="main-content">
@@ -93,21 +117,25 @@ function App() {
             title={MainContent[0].title}
             Content={MainContent[0].content}
             time={MainContent[0].Time}
+            link={MainContent[0].link}
           ></Content>
           <Content
             title={MainContent[1].title}
             Content={MainContent[1].content}
             time={MainContent[1].Time}
+            link={MainContent[1].link}
           ></Content>
           <Content
             title={MainContent[2].title}
             Content={MainContent[2].content}
             time={MainContent[2].Time}
+            link={MainContent[2].link}
           ></Content>
           <Content
             title={MainContent[3].title}
             Content={MainContent[3].content}
             time={MainContent[3].Time}
+            link={MainContent[3].link}
           ></Content>
         </div>
         <div className="main-aside">

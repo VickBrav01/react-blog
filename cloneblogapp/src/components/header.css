@@ -7,3 +7,8 @@
   padding: 1rem;
   box-shadow: 0 8px 8px -8px rgba(230, 173, 173, 0.291);
 }
+
+.links {
+  display: flex;
+  column-gap: 2rem;
+}
